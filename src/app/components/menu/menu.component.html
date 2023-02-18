@@ -1,0 +1,15 @@
+<ng-container>
+    <nav [ngClass]="{'init':!isInit, 'visible': displayMenu }" class="container">
+        <section>
+            <h1>Menu content</h1>
+            <ul class="menu-content">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </section>
+        <aside>
+            <button class="toggleBtn" (click)="toggleDisplay()" [class.active]="displayMenu">></button>
+        </aside>
+    </nav>
+</ng-container>

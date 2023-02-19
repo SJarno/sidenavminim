@@ -12,13 +12,15 @@ export class MenuComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.isInit = true;
-      this.displayMenu = true;
+      /* this.displayMenu = true; */
     }, 500);
   }
 
   
 
-  toggleDisplay() {
+  toggleDisplay(event: any) {
+    const menu = event.currentTarget;
+    menu.classList.toggle('changeMenuBtn');
     this.displayMenu = !this.displayMenu;
 
   }

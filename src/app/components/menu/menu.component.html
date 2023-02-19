@@ -3,13 +3,18 @@
         <section>
             <h1>Menu content</h1>
             <ul class="menu-content">
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
+                <li><a>A link here</a></li>
+                <li><a>B link here</a></li>
+                <li><a>C link here</a></li>
             </ul>
         </section>
         <aside>
-            <button class="toggleBtn" (click)="toggleDisplay()" [class.active]="displayMenu">></button>
+            <!-- <button class="toggleBtn" (click)="toggleDisplay()">></button> -->
+            <div class="toggleBtn" (click)="toggleDisplay($event)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
         </aside>
     </nav>
 </ng-container>

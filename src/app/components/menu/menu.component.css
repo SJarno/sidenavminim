@@ -12,6 +12,7 @@ nav {
 
 }
 
+
 nav.init {
     left: -100%;
 }
@@ -22,9 +23,10 @@ nav.visible {
 }
 
 aside {
-    min-width: 2rem;
     padding: 1rem;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
@@ -41,25 +43,40 @@ section.menu-content {
 }
 
 .toggleBtn {
-    border: none;
-    color: white;
-    background-color: inherit;
-    width: 100%;
-    transition: transform 0.2s ease-in-out;
+    
 }
 
 .toggleBtn:hover {
     cursor: pointer;
 }
 
-.toggleBtn.active {
-    /* transform: rotate(180deg); */
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #817f7f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.changeMenuBtn .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.changeMenuBtn .bar2 {
+    opacity: 0;
+}
+
+.changeMenuBtn .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
 }
 
 @media only screen and (min-width: 600px) {
     nav {
         top: 0;
-        left: -80%;
+        left: -76%;
         transition: left 0.3s ease-out;
         /* apply a smooth transition */
         display: grid;
